@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <script src="./all.js"></script>
+    <link rel="stylesheet" href="./index.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #112e42;
+
+        }
+
+        .text {
+            padding: 7rem 0;
+            text-align: center;
+        }
+
+        .text h1 {
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: 600;
+            color: #ededed;
+        }
+
+        span {
+            color: #00abf0;
+
+        }
+
+        .text-wrap {
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            color: #ededed;
+            border: .1rem solid #00abf0;
+            padding: 5px;
+        }
+
+        .text-wrap p {
+            padding: 1rem;
+            border: 3px solid #00abf0;
+            text-align: center;
+            line-height: 20px;
+            font-family: sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .skills {
+            min-height: auto;
+            padding-bottom: 7rem;
+
+        }
+
+        .skills h2 {
+            font-size: 30px;
+            text-align: center;
+            margin: 3rem;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .skills .skills-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+        }
+
+        .skills-column .title {
+            font-size: 1.5rem;
+            margin: 0 0 1.5rem;
+            text-transform: capitalize;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .skills-box .skills-content {
+            position: relative;
+            padding: .0rem 1rem;
+            border: .2rem solid #00abf0;
+            min-width: 400px;
+            border-radius: .6rem;
+        }
+
+        .skills-content .progress {
+            padding: 5px 0;
+        }
+
+        .progress h3 {
+            color: white;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .progress h3 span {
+            color: #ededed;
+        }
+
+        .skills-content .progress .bar {
+            height: 1.5rem;
+            border-radius: .5rem;
+            border: .2rem solid #00abf0;
+            padding: .2rem;
+            margin: 1rem 0;
+        }
+
+        .skills-content .progress .bar span {
+            display: block;
+            height: 100%;
+            border-radius: .2rem;
+            background-color: #00abf0;
+            position: relative;
+
+        }
+
+        .skills-content .progress .bar span::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background-color: #112e42;
+            transition: 5s all;
+        }
+
+        .skills-content .progress .bar span:hover::after {
+            width: 100%;
+            transition: .1s;
+        }
+
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+            width: 90%;
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+            width: 80%;
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+            width: 65%;
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+            width: 75%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+            width: 95%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+            width: 67%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+            width: 85%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+            width: 60%;
+        }
+
+
+        @media only screen and (max-width:915px) {
+            .container {
+                width: 100%;
+            }
+
+            .links-container {
+                background-color: #081b29;
+            }
+
+            .text-wrap {
+                width: 90%;
+            }
+
+            .skills-row {
+                flex-direction: column;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                gap: 0;
+            }
+
+            .skills-column {
+                width: 90%;
+                margin: auto;
+                padding: 0;
+                margin: 0;
+            }
+
+            .skills-content {
+                width: 90%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .skills-box {
+                width: 100%;
+            }
+
+            .skills-box .skills-content {
+                min-width: 90%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>
+            <div class="logo">
+                <img src="./Screenshot_20231005-151109_1.png" alt=""
+                    style="height: 30px;width: 30px; border: 1px blue solid; border-radius: 50px;">
+                <h2><span>web</span> 3.0</h2>
+            </div>
+
+            <span class="bars">
+                <i class="fa fa-bars "></i>
+            </span>
+
+            <div class="links-container ">
+                <div class="links">
+                    <a href="./index.html">home</a>
+                    <a href="./about.html">about</a>
+                    <a class="active" href="./service.html">services</a>
+                    <a href="">contact us</a>
+                    <a href="./plan.html">our plans</a>
+                </div>
+                <div class="button">
+                    <button class="btn">log in</button>
+                    <button class="btn">Log Out</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="text">
+            <h1>Our <span>Services</span></h1>
+            <div class="text-wrap">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab eligendi sit, aperiam expedita aut
+                    fugiat animi nesciunt illo deserunt corrupti porro delectus iure fuga sapiente molestias. Soluta
+                    nulla dolores eveniet?
+                    Dicta unde corrupti, distinctio architecto obcaecati dolorem quam itaque, illum a ea maiores odit?
+                    Voluptatibus odit, explicabo ad distinctio quasi totam, quisquam fugit nam, nihil saepe in voluptas
+                    repudiandae vitae.</p>
+            </div>
+        </div>
+
+        <section class="skills">
+            <h2 class="heading">My skills</h2>
+
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title"> coding skills</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML <span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            <div class="progress">
+                                <h3>CSS <span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Javascript <span>65%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Python <span>75%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="skills-column">
+                    <h3 class="title"> Professional skills</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>Web-Design <span>95%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            <div class="progress">
+                                <h3>Web-development <span>60%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Graphics <span>85%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Ceo Marketing <span>60%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="fotter">
+            <div class="logo">
+                <img src="./Screenshot_20231005-151109_1.png" alt=""
+                    style="height: 30px;width: 30px; border: 1px blue solid; border-radius: 50px;">
+                <h2><span>web</span> 3.0</h2>
+            </div>
+            <div class="icons">
+                <span> <i class="fab fa-amazon"></i>Amazon</span>
+                <span> <i class="fab fa-facebook"></i>Facebook </span>
+                <span> <i class="fab fa-telegram"></i>Telegram </span>
+                <span> <i class="fab fa-whatsapp"></i>Whatsapp </span>
+                <span> <i class="fab fa-twitter"></i>Twitter </span>
+            </div>
+            <h3>@ 2023 All Right Reserved. </h3>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

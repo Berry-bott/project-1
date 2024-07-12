@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <script src="./all.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        body {
+            background-color: #112e42;
+        }
+
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            padding-bottom: 6rem;
+            padding-top: 4rem;
+        }
+
+        span {
+            color: #00abf0;
+
+        }
+
+        .header {
+            text-align: center;
+            font-size: 50px;
+            padding-top: 2rem;
+            color: #ededed;
+        }
+
+        .about-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 25rem;
+            height: 25rem;
+            border-radius: 50%;
+        }
+
+        .about-img img {
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            border: .2rem solid #00abf0;
+        }
+
+        .about-img .circle-spin {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(-100%, -100%) rotate(0);
+            border-radius: 50%;
+            border-top: .2rem solid #112e42;
+            border-bottom: .2rem solid #112e42;
+            border-left: .2rem solid #00abf0;
+            border-right: .2rem solid #00abf0;
+            animation: circle-spin 1s infinite ;
+        }
+        @keyframes circle-spin{
+            from{
+                transform: rotate(0%);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .about-content {
+            text-align: center;
+            width: 70%;
+            word-break: keep-all;
+        }
+
+        .about-content p {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 3rem;
+            color: #ededed;
+        }
+
+        .about .button .btn {
+            text-decoration: none;
+            margin: 5rem 0;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-color: #112e42;
+        }
+
+        .education {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: auto;
+            background-color: #081b29;
+            padding: 0 5rem 5rem;
+        }
+
+        .education-row {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .education-row .education-column {
+            flex: 1 1 40rem;
+        }
+
+        .education-row .title {
+            font-size: 2rem;
+            margin: 0 0 1.5rem 2rem;
+            color: #ededed;
+        }
+
+        .education-column .education-box {
+            border-left: .2rem solid #00abf0;
+            margin-left: 2rem;
+        }
+
+        .education-box .education-content {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .education-content::before {
+            content: '';
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #00abf0;
+            left: -9px;
+            top: 0;
+
+        }
+
+        .education-content .content {
+            position: relative;
+            padding: 5px 15px;
+            border: .2rem solid #00abf0;
+            border-radius: .6rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .education-content .content::before {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #112e42;
+            transition: .5s;
+            z-index: -1;
+        }
+
+        .education-content .content:hover::before {
+            width: 100%;
+            transition: .5s;
+        }
+
+        .education-content .content .year {
+            font-size: 1.2rem;
+            color: #00abf0;
+        }
+
+        .content h3 {
+            font-size: 1.5rem;
+            color: #ededed;
+            font-family: sans-serif;
+
+        }
+
+        .education h2 {
+            color: #ededed;
+            padding-bottom: 4rem;
+            font-family: sans-serif;
+
+        }
+
+        .content,
+        p {
+            font-size: 1rem;
+            padding: .5rem;
+            color: #ededed;
+            font-family: sans-serif;
+        }
+
+        @media only screen and (max-width:915px) {
+            .container {
+                width: 100%;
+            }
+
+            .links-container {
+                background-color: #081b29;
+            }
+
+            .about {
+                padding-bottom: 0;
+            }
+
+            .about-content {
+                width: 100%;
+            }
+
+            .about-img {
+                width: 90%;
+
+            }
+
+            .about-img img {
+                width: 90%;
+                /* height: 60%; */
+            }
+
+            
+            .about-content p {
+                text-align: center;
+                word-break: keep-all;
+                margin: 2rem;
+            }
+
+            .about-content .button {
+                display: block;
+                padding-bottom: 2rem;
+            }
+
+            .education {
+                padding: 20px;
+            }
+
+            .education h2 {
+                flex-wrap: wrap;
+                margin: 0 20px;
+            }
+
+            .education-content {
+                padding-left: 40px;
+            }
+
+            .education-box {
+                margin-left: 0;
+            }
+
+            .education-column .education-box {
+                margin-left: 0;
+            }
+
+            .education-box .education-content {
+                position: relative;
+                padding-left: 30px;
+                gap: 0;
+                margin: 0;
+                width: 100%;
+            }
+
+            .content {
+                width: 100%;
+                padding: 3rem;
+                margin: 0 auto;
+                border: 1px solid rgb(255, 0, 0);
+            }
+
+            .education-row {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                margin: 0;
+                padding: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>
+            <div class="logo">
+                <img src="./Screenshot_20231005-151109_1.png" alt=""
+                    style="height: 30px;width: 30px; border: 1px blue solid; border-radius: 50px;">
+                <h2><span>web</span> 3.0</h2>
+            </div>
+
+            <span class="bars">
+                <i class="fa fa-bars "></i>
+            </span>
+
+            <div class="links-container">
+                <div class="links">
+                    <a href="./index.html">home</a>
+                    <a class="active" href="">about</a>
+                    <a href="./service.html">services</a>
+                    <a href="">contact us</a>
+                    <a href="./plan.html">our plans</a>
+                </div>
+                <div class="button">
+                    <button class="btn">log in</button>
+                    <button class="btn">log out</button>
+                </div>
+            </div>
+        </nav>
+        <section class="about">
+            <h1 class="header">About <span>Us</span></h1>
+
+            <div class="about-img">
+                <img src="./t-shirt-black-and-white-photography-drawing-sketch-black-and-white-eyes-illustrations-06667c79e9c2ba1fd0badce28814865e.png"
+                    alt="">
+                <span class="circle-spin"></span>
+            </div>
+
+            <div class="about-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nam aperiam sint eligendi unde odit
+                    consequatur hic, repellendus molestias quae recusandae ipsum obcaecati quos nesciunt repellat iste
+                    illum deleniti animi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, odio aliquam, doloribus nihil
+                    molestiae commodi laudantium accusamus libero necessitatibus vitae nisi itaque blanditiis adipisci
+                    in saepe ad repellendus eos cumque!
+                    Aliquam rerum ad dignissimos explicabo temporibus placeat vitae totam incidunt, sequi quod
+                    numquam!
+                </p>
+                <div class="button ">
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class=" education">
+            <h2 class="header">My <span> Journey</span></h2>
+            <div class="education-row">
+                <div class="education-column">
+                    <h3 class="title">Education</h3>
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class=" bx bxs-calendar"></i>2017-2018</div>
+                                <h3>Master degree- university</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Maxime rerum culpa
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class=" bx bxs-calendar"></i>2018-2019</div>
+                                <h3>Master degree- university</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Maxime rerum culpa
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class=" bx bxs-calendar"></i>2019-2020</div>
+                                <h3>Master degree- university</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Maxime rerum culpa
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-column">
+                    <h3 class="title">Exprience</h3>
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class=" bx bxs-calendar"></i>2017-2018</div>
+                                <h3>Trade-Fair-Cooperation</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Maxime rerum culpa
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class=" bx bxs-calendar"></i>2018-2019</div>
+                                <h3>Trade-Fair-Cooperation</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Maxime rerum culpa
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class=" bx bxs-calendar"></i>2019-2020</div>
+                                <h3>Trade-Fair-Cooperation</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Maxime rerum culpa
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="fotter">
+            <div class="logo">
+                <img src="./Screenshot_20231005-151109_1.png" alt=""
+                    style="height: 30px;width: 30px; border: 1px blue solid; border-radius: 50px;">
+                <h2><span>web</span> 3.0</h2>
+            </div>
+            <div class="icons">
+                <span> <i class="fab fa-amazon"></i>Amazon</span>
+                <span> <i class="fab fa-facebook"></i>Facebook </span>
+                <span> <i class="fab fa-telegram"></i>Telegram </span>
+                <span> <i class="fab fa-whatsapp"></i>Whatsapp </span>
+                <span> <i class="fab fa-twitter"></i>Twitter </span>
+            </div>
+            <h3>@ 2023 All Right Reserved. </h3>
+        </div>
+
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

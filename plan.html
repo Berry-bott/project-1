@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our plan</title>
+    <script src="./all.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+  
+    .hero {
+        width: 100%;
+        margin-top: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .img-tag {
+        text-align: center;
+
+    }
+
+    .img-tag img {
+        height: 300px;
+        width: 600px;
+        /* z-index: -1; */
+    }
+
+    .content {
+        width: 500px;
+        margin: 2rem auto;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .content p {
+        text-align: center;
+        color: #ededed;
+        font-family: sans-serif;
+    }
+    .content h1{
+        color: #ededed;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    .content a{
+        color: #00abf0;
+    }
+
+    .hero-sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .text {
+        text-align: center;
+        width: 300px;
+        border-radius: 10px;
+    }
+   
+
+    span {
+        color: #00abf0;
+    }
+
+    .span {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-right: 25px;
+        font-size: 17px;
+    }
+
+    .text h3:nth-child(2) {
+        background-color:#112e42;
+    }
+
+    .text1 {
+        width: 250px;
+        padding-left: 30px;
+    }
+
+    .text1 h3 {
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        padding: 2rem 0;
+    }
+    .h{
+        color: #ededed;
+    }
+
+    .hero h2 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding-bottom: 20px;
+        color: #ededed;
+    }
+
+    .text h3 {
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+
+    }
+
+    h4 {
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #00abf0;
+    }
+
+    h5 {
+        background-color: #00abf0;
+        border: 2px solid #00abf0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px;
+    }
+
+    h6 {
+        font-size: 17px;
+        text-align: center;
+        margin-top: 20px;
+        color: #00abf0;
+    }
+
+    p {
+        color: #ededed;
+        padding-bottom: 1rem;
+    }
+
+    .p {
+        padding-bottom: 2.5rem;
+    }
+
+    .div:nth-child(1) {
+        margin-top: 1rem;
+    }
+
+    .text:nth-child(2) {
+        border: 1px solid #00abf0;
+        padding-bottom: 3rem;
+        margin-top: 2rem;
+    }
+
+    .d {
+        background-color: rgb(244, 244, 173);
+    }
+
+    .butt {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 7px 35px;
+        border-radius: 13px;
+        margin-top: 20px;
+
+    }
+
+    .fotter {
+        background-color:#112e42;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icons span {
+        gap: 1rem;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .fotter h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-size: 15px;
+    }
+
+
+    @media only screen and (max-width:915px) {
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero {
+            width: 100%;
+            padding-left: 0;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .img-tag img {
+            width: 100%;
+        }
+
+        .content {
+            width: 70%;
+            text-align: center;
+            flex-wrap: wrap;
+            padding-top: 15rem;
+
+
+        }
+
+        .hero-sec {
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .text,
+        .text1 {
+            margin: 2rem auto;
+            width: 90%;
+            text-align: center;
+            padding-left: 0;
+        }
+
+        .div {
+            width: 95%;
+            margin: 1rem auto;
+        }
+
+        .fotter {
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .icons span {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+          
+                <img src="./Screenshot_20231005-151109_1.png" alt=""
+                    style="height: 30px;width: 30px; border: 1px blue solid; border-radius: 50px;">
+                <h2><span>web</span> 3.0</h2>
+            </div>
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="links-container">
+                <div class="links">
+                    <a href="./index.html">home</a>
+                    <a href="./about.html">about</a>
+                    <a href="./service.html">services</a>
+                    <a href="">contact us</a>
+                    <a class="active" href="">our plans</a>
+                </div>
+                <div class="button">
+                    <button class="btn">log in</button>
+                    <button class="btn">log out</button>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="img-tag">
+                <img src="./t-shirt-black-and-white-photography-drawing-sketch-black-and-white-eyes-illustrations-06667c79e9c2ba1fd0badce28814865e.png"
+                    alt="">
+            </div>
+            <div class="content">
+                <h1>choose your plan</h1>
+                <p>
+                    choose the price plan that works best for your business, whether you're looking looking for
+                    causal transsation or flexible customizations.
+                </p>
+                <a href="">Learn more in FAQ'S</a>
+            </div>
+            <div class="hero-sec">
+                <div class="text">
+                    <div class="div">
+                        <h3 class="h"><span class="span">Growth</span>AEDO /month</h3>
+
+                        <h4><big>29%</big>.AEDO1</h4>
+                        <p>for UEA card</p>
+                    </div>
+                    <div class="div">
+                        <h4><big>3.4%</big>.AEDO1</h4>
+                        <p class="p">For internalized card</p>
+                    </div>
+                    <div class="div">
+                        <p>! All contain excluded 5% VAT</p>
+                        <h6>Get Growth</h6>
+                    </div>
+                </div>
+
+                <div class="text">
+                    <h5>Recommended</h5>
+                    <div class="div">
+                        <div class="d">
+                            <h3><span>Premium</span> AEDO 149/month</h3>
+                        </div>
+                        <h4><big>2.7%</big>.AED 0.8</h4>
+                        <p>For UEA card</p>
+                    </div>
+                    <div class="div">
+                        <h4><big>3.25%</big>.AED 0.8</h4>
+                        <p class="p">For international card</p>
+                    </div>
+                    <div class="div">
+                        <p> ! All contain excluded 5% VAT</p>
+                        <button class="butt">Get Premium</button>
+                    </div>
+                </div>
+                <div class="text1">
+                    <div class="div">
+                        <h3><span>Enterperise</span></h3>
+                        <h2>A pricing plan customized for your business</h2>
+                        <p>Dont fit your budiness in a box, Get in touch with us for a custom pricing plan that works
+                            best for what your need </p>
+                        <h6>Contact Us</h6>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fotter">
+            <div class="logo">
+                <img src="./Screenshot_20231005-151109_1.png" alt=""
+                    style="height: 30px;width: 30px; border: 1px blue solid; border-radius: 50px;">
+                <h2><span>web</span> 3.0</h2>
+            </div>
+            <div class="icons">
+                <span> <i class="fab fa-amazon"></i>Amazon</span>
+                <span> <i class="fab fa-facebook"></i>Facebook </span>
+                <span> <i class="fab fa-telegram"></i>Telegram </span>
+                <span> <i class="fab fa-whatsapp"></i>Whatsapp </span>
+                <span> <i class="fab fa-twitter"></i>Twitter </span>
+            </div>
+            <h3>@ 2023 All Right Reserved. </h3>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

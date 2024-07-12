@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in page</title>
+    <script src="./all.js"></script>
+</head>
+<style>
+    body {
+        background-color: #00abf0;
+        text-decoration: none;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        height: 60%;
+    }
+
+    .content {
+        background-color: white;
+        width: 570px;
+        border: 1px solid #000;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif Helvetica, sans-serif;
+    }
+
+    span {
+        text-align: center;
+    }
+
+    form {
+        width: 450px;
+        padding: 15px;
+        margin: 30px auto;
+        border: 1.5px solid;
+    }
+
+    .email {
+        border: 1px solid #000;
+    }
+
+    .email input {
+        width: 80%;
+
+
+    }
+
+    .password {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+    }
+
+    input {
+        width: 400px;
+        padding: 15px;
+        margin: 5px;
+        outline: none;
+        border: none;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .password i {
+        padding-right: 10px;
+    }
+
+    .submit {
+        width: 5rem;
+        background-color: rgb(43, 0, 255);
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .password {
+        margin-top: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .checkbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-top: 20px;
+        border: 1px solid #000;
+
+    }
+
+    .checkbox input {
+        width: 100%;
+
+    }
+
+    .checkbox a {
+        padding-bottom: 15px;
+        text-decoration: none;
+        border: none;
+    }
+
+    .check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+
+    label {
+        width: 300px;
+        font-size: 13px;
+    }
+
+    .summit p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .social {
+        color: blue;
+        text-align: center;
+    }
+
+    span {
+        font-size: 30px;
+        color: red;
+    }
+
+    @media only screen and (max-width:915px) {
+        .container {
+            width: 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        .content {
+            width: 90%;
+        }
+
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 90%;
+        }
+
+        .email {
+            width: 100%;
+        }
+
+        .checkbox {
+            width: 100%;
+        }
+
+        .check {
+            padding-right: 3rem;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="wrapper">
+            <div class="content">
+                <div class="span"> <span>
+                        <h2>Web 3.0</h2>
+                    </span></div>
+                <h1 class="heading"> Login to your account</h1>
+                <div class="sign-in">
+                    <form action="">
+                        <div class="email">
+                            <input type="email" placeholder="Enter your email "> <br>
+                        </div>
+
+                        <div class="password">
+                            <input type="password" placeholder="Input password"><br>
+                            <i class="fa fa-eye"></i>
+                        </div>
+
+                        <div class="checkbox">
+                            <div class="check">
+                                <input type="checkbox" placeholder="Remember Me" value="Remember Me">
+                                <label for="forget"> Remember Me</label>
+                            </div>
+                            <a class="forget password" href="">Forget password?</a>
+                        </div>
+
+                        <div class="summit">
+                            <a href="./index.html" class="submit">Login</a>
+                            <p><b>OR</b> <br> Login with </p>
+                        </div>
+                        <div class="social">
+                            <span> <i class="fab fa-google"></i> </span> </span>
+                            <span class="social">
+                                <i class="fab fa-facebook"></i>
+                            </span>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
